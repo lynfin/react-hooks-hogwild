@@ -11,11 +11,30 @@ function PigTile({ hog }) {
 
   return (
     <div
-      className="pigTile ui eight wide column"
+      className="pigTile  ui eight wide column"
       onClick={() => handlePigTileClick()}
     >
       <h3>{name}</h3>
-      <img className="minPigTile" alt="pig" src={image} />
+      <img alt="pig" className={curClass} src={image} />
+      <ul
+        className="hoggyText"
+        style={{ display: pigSelected ? "block" : "none" }}
+      >
+        <li>
+          <em>Speciality: </em>
+          {specialty}
+        </li>
+        <li>
+          <em>Weight: </em>
+          {weight} kg
+        </li>
+        <li>{greased ? "Greased" : "Not Greased"}</li>
+        <li>
+          <em>Highest Medal: </em>
+          <span className="achievementText">{highestMedal}</span>
+        </li>
+      </ul>
+      {/* <img className="minPigTile" alt="pig" src={image} /> */}
     </div>
   );
 }
