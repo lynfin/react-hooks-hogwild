@@ -3,7 +3,7 @@ import PigTile from "./PigTile";
 
 function PigPen({ hogs }) {
   return (
-    <div class="ui grid container">
+    <div className="ui grid container">
       {hogs.map((hog) => (
         <PigTile key={hog.name} hog={hog} />
       ))}
